@@ -1,0 +1,11 @@
+Instead of hard-coding your API keys, you can store them as environment variables in Postman. In the same way you use variables for parameterized data, you can also use variables to decouple your secrets from the rest of your code. Storing your API key as an environment variable allows you to revoke, or refresh, the value in a single spot. (If environment variables aren’t ideal for your use case, you can also choose another type of variable.)
+
+#2: Do not share your API keys with your team
+If you’re sharing an environment with your team, keep your tokens private by only updating the current value. This also ensures that you don’t override the team’s value.
+
+For global, collection, and environment variables, you can distinguish between an initial and current value. The current value is local to your session within your Postman app. If you log out of Postman, those values will disappear. The current value is never synced to your account or shared with your team—unless you choose to persist it—which keeps it more secure.
+
+Let’s walk through an example in which I share an environment with my team without sharing my personal API key.
+
+Make sure “Automatically persist variable values” is toggled OFF in your general settings, so that you do not persist the current value of variables to the initial value:
+
